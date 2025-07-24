@@ -3,51 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Games - My Game Portfolio</title>
+    <title>3D Games - Hardik Kalena Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li class="dropdown">
-                    <a href="#">Portfolio</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="2d.html">2D Games</a></li>
-                        <li><a href="3d.html">3D Games</a></li>
-                        <li><a href="vr.html">VR Games</a></li>
-                        <li><a href="systems.html">Systems</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="3d-games">
-        <h1>3D Games</h1>
-        <p>Immerse yourself in my collection of 3D games, showcasing detailed worlds and thrilling gameplay.</p>
-
-        <div class="game-showcase">
-            <div class="game">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ve_6C15JaIk" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <p><strong>Aftermath</strong> - Open World Zombie Survival Game</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-controller me-2"></i>Hardik Kalena
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="2d.html">2D Games</a></li>
+                            <li><a class="dropdown-item active" href="3d.html">3D Games</a></li>
+                            <li><a class="dropdown-item" href="vr.html">VR Games</a></li>
+                            <li><a class="dropdown-item" href="systems.html">Systems</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <div class="game">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/CeHqzgMGbv8?si=iRJjnMq-tJABGj9Z" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <p><strong>Endless Runner</strong> - Endless Runner Game</p>
-            </div>
-            <div class="game">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Uf5-ZdyRndU?si=DZhOCZetjWlhY_1c" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <p><strong>Tank Shooter</strong> - Tank Shooter Game</p>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-title">
+                        <i class="bi bi-box me-3"></i>3D Games
+                    </h1>
+                    <p class="page-subtitle">Immerse yourself in my collection of 3D games, showcasing detailed worlds, advanced mechanics, and thrilling gameplay experiences that demonstrate expertise in three-dimensional game development.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 My Game Portfolio. All rights reserved.</p>
+    <!-- 3D Games Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Aftermath -->
+                <div class="col-lg-8">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/ve_6C15JaIk" title="Aftermath Gameplay" allowfullscreen style="height: 400px;"></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">
+                                <i class="bi bi-virus me-2 text-danger"></i>Aftermath
+                            </h5>
+                            <p class="game-description">Open World Zombie Survival Game - A comprehensive survival experience featuring an expansive open world filled with dangerous zombies and environmental challenges. Players must scavenge for resources, craft weapons, build shelters, and survive against overwhelming odds. The game includes dynamic day/night cycles, weather systems, and an immersive storyline that unfolds as players explore the post-apocalyptic landscape.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-danger me-2">Survival</span>
+                                <span class="badge bg-dark me-2">Open World</span>
+                                <span class="badge bg-secondary me-2">Crafting</span>
+                                <span class="badge bg-warning">Story-Driven</span>
+                            </div>
+                            <div class="mt-3">
+                                <h6>Key Features:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i>Large explorable open world</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i>Advanced AI zombie behavior</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i>Resource management system</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i>Dynamic weather and day/night cycle</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endless Runner -->
+                <div class="col-lg-4">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/CeHqzgMGbv8?si=iRJjnMq-tJABGj9Z" title="Endless Runner Gameplay" allowfullscreen style="height: 250px;"></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">
+                                <i class="bi bi-arrow-right me-2 text-primary"></i>Endless Runner
+                            </h5>
+                            <p class="game-description">Fast-paced 3D endless runner with procedurally generated obstacles and power-ups. Features smooth character animations and challenging gameplay mechanics.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">Endless</span>
+                                <span class="badge bg-success">Casual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tank Shooter -->
+                <div class="col-lg-4">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/Uf5-ZdyRndU?si=DZhOCZetjWlhY_1c" title="Tank Shooter Gameplay" allowfullscreen style="height: 250px;"></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">
+                                <i class="bi bi-shield me-2 text-success"></i>Tank Shooter
+                            </h5>
+                            <p class="game-description">Strategic tank combat game featuring realistic physics, multiple tank types, and destructible environments. Players engage in tactical battles across varied terrains.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-success me-2">Strategy</span>
+                                <span class="badge bg-danger">Combat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Details Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card bg-light">
+                        <div class="card-body p-4">
+                            <h4 class="text-center mb-4">3D Development Expertise</h4>
+                            <div class="row">
+                                <div class="col-md-3 text-center mb-4">
+                                    <i class="bi bi-cpu display-4 text-primary mb-3"></i>
+                                    <h5>Unity HDRP</h5>
+                                    <p class="text-muted">Advanced rendering pipeline implementation for high-quality visuals and realistic lighting effects.</p>
+                                </div>
+                                <div class="col-md-3 text-center mb-4">
+                                    <i class="bi bi-globe display-4 text-success mb-3"></i>
+                                    <h5>Open World Design</h5>
+                                    <p class="text-muted">Large-scale environment creation with optimized LOD systems and seamless world streaming.</p>
+                                </div>
+                                <div class="col-md-3 text-center mb-4">
+                                    <i class="bi bi-robot display-4 text-warning mb-3"></i>
+                                    <h5>AI Systems</h5>
+                                    <p class="text-muted">Complex AI behaviors including pathfinding, state machines, and behavioral trees for realistic NPCs.</p>
+                                </div>
+                                <div class="col-md-3 text-center mb-4">
+                                    <i class="bi bi-speedometer2 display-4 text-info mb-3"></i>
+                                    <h5>Performance Optimization</h5>
+                                    <p class="text-muted">Efficient rendering techniques, object pooling, and memory management for smooth gameplay.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aftermath Detailed Showcase -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-gradient" style="background: linear-gradient(135deg, #2c3e50, #e74c3c);">
+                            <h4 class="text-white mb-0">
+                                <i class="bi bi-star me-2"></i>Featured Project: Aftermath
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-primary mb-3">Game Systems</h5>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-gear-fill text-primary me-2"></i>
+                                            Inventory and Crafting System
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-heart-fill text-danger me-2"></i>
+                                            Health and Hunger Management
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-house-fill text-success me-2"></i>
+                                            Base Building Mechanics
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-trophy-fill text-warning me-2"></i>
+                                            Quest and Achievement System
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-primary mb-3">Technical Achievements</h5>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-cloud-fill text-info me-2"></i>
+                                            Dynamic Weather System
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-moon-stars-fill text-secondary me-2"></i>
+                                            Day/Night Cycle with Lighting
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-soundwave text-purple me-2"></i>
+                                            3D Spatial Audio System
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-graph-up text-success me-2"></i>
+                                            Performance Optimization
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation to Other Sections -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h4 class="mb-4">Explore More Projects</h4>
+                    <a href="2d.html" class="btn btn-outline-primary btn-lg me-3">
+                        <i class="bi bi-grid-3x3-gap me-2"></i>2D Games
+                    </a>
+                    <a href="vr.html" class="btn btn-custom btn-lg me-3">
+                        <i class="bi bi-headset-vr me-2"></i>VR Games
+                    </a>
+                    <a href="systems.html" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-cpu me-2"></i>Systems
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Hardik Kalena - Game Developer Portfolio. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

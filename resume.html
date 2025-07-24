@@ -1,152 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hardik Kalena - Resume</title>
-    <style>
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 40px;
-            background: #f9f9f9;
-            color: #333;
-        }
-
-        .resume {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 40px 50px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-
-        h1 {
-            margin-bottom: 5px;
-            font-size: 32px;
-            color: #2c3e50;
-        }
-
-        .subtitle {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: #2c3e50;
-            margin-top: 40px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            font-size: 20px;
-        }
-
-        p, li {
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .contact {
-            text-align: right;
-            font-size: 14px;
-            color: #444;
-        }
-
-        .section {
-            margin-bottom: 20px;
-        }
-
-        .job-title {
-            font-weight: bold;
-            color: #000;
-        }
-
-        .company {
-            font-style: italic;
-            color: #444;
-        }
-
-        .date {
-            float: right;
-            color: #777;
-            font-size: 14px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Hardik Kalena</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="resume">
-        <div class="header">
-            <h1>Hardik Kalena</h1>
-            <div class="subtitle">Unity Game Developer</div>
-            <div class="contact">
-                hardikkalena007@gmail.com<br>
-                +91 9023551905 | Pune<br>
-                <a href="https://hardikalena.github.io/HardikPortfolio.github.io/">Portfolio</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-controller me-2"></i>Hardik Kalena
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="2d.html">2D Games</a></li>
+                            <li><a class="dropdown-item" href="3d.html">3D Games</a></li>
+                            <li><a class="dropdown-item" href="vr.html">VR Games</a></li>
+                            <li><a class="dropdown-item" href="systems.html">Systems</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <div class="section">
-            <h2>Career Objective</h2>
-            <p>Aspiring Game Developer with a strong foundation in Unity and C#, passionate about building engaging gameplay experiences. Eager to contribute to a creative and collaborative team while continuing to grow my skills in game programming and real-world project development.</p>
-        </div>
+    <!-- Resume Section -->
+    <section class="resume-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="resume-card">
+                        <!-- Resume Header -->
+                        <div class="resume-header">
+                            <div class="text-center">
+                                <h1 class="display-4 mb-2">Hardik Kalena</h1>
+                                <p class="lead mb-3">Unity Game Developer</p>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8">
+                                        <div class="d-flex justify-content-center flex-wrap gap-3">
+                                            <span><i class="bi bi-envelope me-2"></i>hardikkalena007@gmail.com</span>
+                                            <span><i class="bi bi-phone me-2"></i>+91 9023551905</span>
+                                            <span><i class="bi bi-geo-alt me-2"></i>Pune, India</span>
+                                        </div>
+                                        <div class="mt-2">
+                                            <a href="https://hardikalena.github.io/HardikPortfolio.github.io/" class="text-white text-decoration-none">
+                                                <i class="bi bi-globe me-2"></i>Portfolio Website
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="section">
-            <h2>Work Experience</h2>
-            <p class="job-title">Game Development Intern<span class="date">Jan 2025 – Apr 2025</span></p>
-            <p class="company">Sherlock Studios (Remote)</p>
-            <ul>
-                <li>Refactored and cleaned a large legacy codebase in Unity (HDRP).</li>
-                <li>Implemented horror gameplay systems including jump scares, AI behaviors, and event triggers.</li>
-                <li>Collaborated with QA and the original developer to fix critical bugs under tight deadlines.</li>
-                <li>Delivered a stable, playable horror FPS demo independently.</li>
-            </ul>
-        </div>
+                        <!-- Resume Body -->
+                        <div class="resume-body">
+                            <!-- Career Objective -->
+                            <div class="mb-5">
+                                <h3 class="resume-section-title">
+                                    <i class="bi bi-target me-2"></i>Career Objective
+                                </h3>
+                                <p class="lead">Aspiring Game Developer with a strong foundation in Unity and C#, passionate about building engaging gameplay experiences. Eager to contribute to a creative and collaborative team while continuing to grow my skills in game programming and real-world project development.</p>
+                            </div>
 
-        <div class="section">
-            <h2>Education</h2>
-            <p class="job-title">BCA – Game Development<span class="date">2022 – 2025</span></p>
-            <p class="company">Ajeenkya DY Patil University</p>
-            <p>CGPA: 8.50 / 10</p>
-        </div>
+                            <!-- Work Experience -->
+                            <div class="mb-5">
+                                <h3 class="resume-section-title">
+                                    <i class="bi bi-briefcase me-2"></i>Work Experience
+                                </h3>
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <h5 class="job-title text-primary mb-1">Game Development Intern</h5>
+                                            <span class="badge bg-primary date-range">Jan 2025 – Apr 2025</span>
+                                        </div>
+                                        <p class="company-name mb-3">Sherlock Studios (Remote)</p>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2">
+                                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                Refactored and cleaned a large legacy codebase in Unity (HDRP) for improved maintainability and performance.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                Implemented horror gameplay systems including jump scares, AI behaviors, and event triggers.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                Collaborated with QA and the original developer to fix critical bugs under tight deadlines.
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                Delivered a stable, playable horror FPS demo independently within project timeline.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
 
-        <div class="section">
-            <h2>Trainings & Certifications</h2>
-            <p><strong>Seamedu School of Pro-Expressionism, Pune</strong> – Game Development Training (Aug 2022 – Present)</p>
-        </div>
+                            <!-- Education -->
+                            <div class="mb-5">
+                                <h3 class="resume-section-title">
+                                    <i class="bi bi-mortarboard me-2"></i>Education
+                                </h3>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <h5 class="job-title text-primary mb-1">BCA – Game Development</h5>
+                                            <span class="badge bg-success date-range">2022 – 2025</span>
+                                        </div>
+                                        <p class="company-name mb-2">Ajeenkya DY Patil University</p>
+                                        <p class="mb-0"><strong>CGPA:</strong> <span class="text-success fw-bold">8.50 / 10</span></p>
+                                    </div>
+                                </div>
+                            </div>
 
-        <div class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>TatvaShilla Game</strong> – Tower defense game (Game Jam Winner).</li>
-                <li><strong>My First VR Game</strong> – VR space shooter in Unity using XR Toolkit.</li>
-                <li><strong>Zombies Survival Game</strong> – Story-driven, semi open-world shooter built solo.</li>
-            </ul>
-        </div>
+                            <!-- Training & Certifications -->
+                            <div class="mb-5">
+                                <h3 class="resume-section-title">
+                                    <i class="bi bi-award me-2"></i>Trainings & Certifications
+                                </h3>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="text-primary mb-2">Game Development Training</h5>
+                                        <p class="company-name mb-2">Seamedu School of Pro-Expressionism, Pune</p>
+                                        <span class="badge bg-info">Aug 2022 – Present</span>
+                                    </div>
+                                </div>
+                            </div>
 
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Unity Engine, C#</li>
-                <li>Basic Unreal Engine</li>
-                <li>Game Systems, Debugging, Game AI</li>
-                <li>Version Control: Github Desktop | SourceTree</li>
-            </ul>
-        </div>
+                            <!-- Projects -->
+                            <div class="mb-5">
+                                <h3 class="resume-section-title">
+                                    <i class="bi bi-folder me-2"></i>Key Projects
+                                </h3>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h6 class="text-primary mb-2">
+                                                    <i class="bi bi-trophy-fill text-warning me-2"></i>TatvaShilla Game
+                                                </h6>
+                                                <p class="card-text">Tower defense game set in stone age. <strong>Winner of Game Jam competition</strong> for innovative mechanics and polished gameplay.</p>
+                                                <span class="badge bg-warning text-dark">Award Winner</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h6 class="text-primary mb-2">
+                                                    <i class="bi bi-headset-vr me-2"></i>My First VR Game
+                                                </h6>
+                                                <p class="card-text">VR space shooter developed in Unity using XR Toolkit with immersive hand tracking and spatial audio.</p>
+                                                <span class="badge bg-info">VR Development</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h6 class="text-primary mb-2">
+                                                    <i class="bi bi-virus me-2"></i>Aftermath
+                                                </h6>
+                                                <p class="card-text">Story-driven, semi open-world zombie survival game built solo with advanced AI systems and resource management.</p>
+                                                <span class="badge bg-danger">Solo Project</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <h6 class="text-primary mb-2">
+                                                    <i class="bi bi-sword me-2"></i>Combat System
+                                                </h6>
+                                                <p class="card-text">Modular and scalable sword combat system with state machines, strategy patterns, and component-based architecture.</p>
+                                                <span class="badge bg-secondary">System Design</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-        <div class="section">
-            <h2>Additional Highlights</h2>
-            <ul>
-                <li>Delivered a horror FPS demo during Unity internship.</li>
-                <li>Solo-developed a full zombie survival game.</li>
-                <li>Won a game jam with unique mechanics in TatvaShilla.</li>
-                <li>Maintained CGPA 8.5+ throughout graduation.</li>
-            </ul>
+                            <!-- Skills -->
+                            <div class="mb-5">
+                                <h3 class="resume-section-title">
+                                    <i class="bi bi-tools me-2"></i>Technical Skills
+                                </h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header bg-primary text-white">
+                                                <h6 class="mb-0">Game Development</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-2">
+                                                    <span class="badge bg-primary me-2">Unity Engine</span>
+                                                    <span class="badge bg-success me-2">C# Programming</span>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <span class="badge bg-info me-2">Unity HDRP</span>
+                                                    <span class="badge bg-warning text-dark me-2">XR Toolkit</span>
+                                                </div>
+                                                <div>
+                                                    <span class="badge bg-secondary me-2">Basic Unreal Engine</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header bg-success text-white">
+                                                <h6 class="mb-0">Development Tools</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-2">
+                                                    <span class="badge bg-dark me-2">Visual Studio</span>
+                                                    <span class="badge bg-info me-2">GitHub Desktop</span>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <span class="badge bg-warning text-dark me-2">SourceTree</span>
+                                                    <span class="badge bg-primary me-2">Game AI</span>
+                                                </div>
+                                                <div>
+                                                    <span class="badge bg-danger me-2">Debugging</span>
+                                                    <span class="badge bg-success">Game Systems</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Highlights -->
+                            <div class="mb-4">
+                                <h3 class="resume-section-title">
+                                    <i class="bi bi-star me-2"></i>Additional Highlights
+                                </h3>
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <ul class="list-unstyled">
+                                                    <li class="mb-2">
+                                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                                        Delivered a horror FPS demo during Unity internship
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                                        Solo-developed a full zombie survival game
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <ul class="list-unstyled">
+                                                    <li class="mb-2">
+                                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                                        Won a game jam with unique mechanics in TatvaShilla
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <i class="bi bi-check-circle text-success me-2"></i>
+                                                        Maintained CGPA 8.5+ throughout graduation
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Download Resume Button -->
+                            <div class="text-center">
+                                <a href="#" class="btn btn-custom btn-lg me-3" onclick="window.print()">
+                                    <i class="bi bi-download me-2"></i>Download PDF
+                                </a>
+                                <a href="index.html#contact" class="btn btn-outline-primary btn-lg">
+                                    <i class="bi bi-envelope me-2"></i>Contact Me
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Hardik Kalena - Game Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <style>
+        @media print {
+            .navbar, .footer, .btn {
+                display: none !important;
+            }
+
+            body {
+                padding-top: 0 !important;
+            }
+
+            .resume-section {
+                padding: 20px 0 !important;
+            }
+
+            .card {
+                border: 1px solid #ddd !important;
+                box-shadow: none !important;
+            }
+        }
+    </style>
 </body>
 </html>

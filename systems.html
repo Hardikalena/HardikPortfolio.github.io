@@ -3,43 +3,438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Systems - My Game Portfolio</title>
+    <title>Game Systems - Hardik Kalena Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li class="dropdown">
-                    <a href="#">Portfolio</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="2d.html">2D Games</a></li>
-                        <li><a href="3d.html">3D Games</a></li>
-                        <li><a href="vr.html">VR Games</a></li>
-                        <li><a href="systems.html">Systems</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-controller me-2"></i>Hardik Kalena
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="2d.html">2D Games</a></li>
+                            <li><a class="dropdown-item" href="3d.html">3D Games</a></li>
+                            <li><a class="dropdown-item" href="vr.html">VR Games</a></li>
+                            <li><a class="dropdown-item active" href="systems.html">Systems</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <section id="vr-games">
-        <h1>Systems</h1>
-        <p>Fully Scalable and Modular approach for Sword Combat in Unity.</p>
-
-        <div class="game-showcase">
-            <div class="game">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ge3Lqp7CaJE?si=EHB411_RMGnj7fVn" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <p><strong>Combat System</strong> - Combat System created in Unity</p>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-title">
+                        <i class="bi bi-cpu me-3"></i>Game Systems
+                    </h1>
+                    <p class="page-subtitle">Discover modular and scalable game systems designed with clean architecture principles. These systems demonstrate advanced programming concepts and reusable components for game development.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 My Game Portfolio. All rights reserved.</p>
+    <!-- Combat System Showcase -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/ge3Lqp7CaJE?si=EHB411_RMGnj7fVn" title="Combat System Demo" allowfullscreen style="height: 500px;"></iframe>
+                        </div>
+                        <div class="game-card-body p-4">
+                            <h3 class="game-title text-center mb-4">
+                                <i class="bi bi-sword me-2 text-danger"></i>Modular Combat System
+                            </h3>
+                            <p class="game-description lead text-center mb-4">A fully scalable and modular approach to sword combat in Unity, designed with SOLID principles and clean architecture. This system demonstrates advanced programming concepts including state machines, strategy patterns, and component-based design.</p>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h5 class="text-primary mb-3">
+                                        <i class="bi bi-gear-fill me-2"></i>System Architecture
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Modular Design:</strong> Component-based architecture for easy extension
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>State Machine:</strong> Finite state machine for combat states
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Strategy Pattern:</strong> Different combat strategies and styles
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Observer Pattern:</strong> Event-driven combat notifications
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Scriptable Objects:</strong> Data-driven weapon configurations
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-primary mb-3">
+                                        <i class="bi bi-lightning-fill me-2"></i>Combat Features
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Combo System:</strong> Chain attacks with timing-based combos
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Parry & Block:</strong> Defensive mechanics with precise timing
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Damage System:</strong> Critical hits and damage calculation
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Animation Integration:</strong> Smooth animation blending
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Weapon Variety:</strong> Multiple weapon types and behaviors
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <span class="badge bg-danger me-2">Combat System</span>
+                                <span class="badge bg-primary me-2">Modular Architecture</span>
+                                <span class="badge bg-success me-2">Unity C#</span>
+                                <span class="badge bg-warning me-2">SOLID Principles</span>
+                                <span class="badge bg-info">Scalable Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Architecture Diagram -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card bg-light">
+                        <div class="card-body p-4">
+                            <h4 class="text-center mb-4">System Architecture Overview</h4>
+                            <div class="row">
+                                <div class="col-md-3 text-center mb-4">
+                                    <div class="bg-primary text-white rounded p-3 mb-3">
+                                        <i class="bi bi-person-fill display-4"></i>
+                                        <h5 class="mt-2">Combat Controller</h5>
+                                    </div>
+                                    <p class="text-muted">Main controller managing combat state transitions and input handling</p>
+                                </div>
+                                <div class="col-md-3 text-center mb-4">
+                                    <div class="bg-success text-white rounded p-3 mb-3">
+                                        <i class="bi bi-sword display-4"></i>
+                                        <h5 class="mt-2">Weapon System</h5>
+                                    </div>
+                                    <p class="text-muted">Modular weapon components with unique properties and behaviors</p>
+                                </div>
+                                <div class="col-md-3 text-center mb-4">
+                                    <div class="bg-warning text-white rounded p-3 mb-3">
+                                        <i class="bi bi-heart-fill display-4"></i>
+                                        <h5 class="mt-2">Health System</h5>
+                                    </div>
+                                    <p class="text-muted">Damage calculation, health management, and status effects</p>
+                                </div>
+                                <div class="col-md-3 text-center mb-4">
+                                    <div class="bg-info text-white rounded p-3 mb-3">
+                                        <i class="bi bi-activity display-4"></i>
+                                        <h5 class="mt-2">Animation System</h5>
+                                    </div>
+                                    <p class="text-muted">Smooth animation blending and combat move execution</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Architecture Details -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-gradient" style="background: linear-gradient(135deg, #ff6b6b, #feca57);">
+                            <h4 class="text-white mb-0">
+                                <i class="bi bi-code-slash me-2"></i>Technical Implementation
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-primary mb-3">
+                                        <i class="bi bi-diagram-3 me-2"></i>Design Patterns Used
+                                    </h5>
+                                    <div class="list-group">
+                                        <div class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-arrow-right text-warning me-2"></i>
+                                            <div>
+                                                <strong>Observer Pattern</strong>
+                                                <br><small class="text-muted">Event system for combat notifications</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-arrow-right text-info me-2"></i>
+                                            <div>
+                                                <strong>Component Pattern</strong>
+                                                <br><small class="text-muted">Modular component-based architecture</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-primary mb-3">
+                                        <i class="bi bi-tools me-2"></i>Technical Features
+                                    </h5>
+                                    <div class="list-group">
+                                        <div class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-check2 text-success me-2"></i>
+                                            <div>
+                                                <strong>Scriptable Objects</strong>
+                                                <br><small class="text-muted">Data-driven weapon and ability configuration</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-check2 text-success me-2"></i>
+                                            <div>
+                                                <strong>Unity Events</strong>
+                                                <br><small class="text-muted">Decoupled event-driven communication</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-check2 text-success me-2"></i>
+                                            <div>
+                                                <strong>Object Pooling</strong>
+                                                <br><small class="text-muted">Efficient particle and effect management</small>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-check2 text-success me-2"></i>
+                                            <div>
+                                                <strong>Custom Inspectors</strong>
+                                                <br><small class="text-muted">Enhanced Unity editor integration</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Benefits -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body p-4">
+                            <h4 class="text-center mb-4">
+                                <i class="bi bi-star me-2"></i>System Benefits & Scalability
+                            </h4>
+                            <div class="row">
+                                <div class="col-md-4 text-center mb-4">
+                                    <i class="bi bi-puzzle display-4 text-primary mb-3"></i>
+                                    <h5>Modular Design</h5>
+                                    <p>Easy to extend with new weapons, abilities, and combat mechanics without affecting existing code.</p>
+                                </div>
+                                <div class="col-md-4 text-center mb-4">
+                                    <i class="bi bi-speedometer2 display-4 text-success mb-3"></i>
+                                    <h5>Performance Optimized</h5>
+                                    <p>Efficient resource management with object pooling and optimized update cycles.</p>
+                                </div>
+                                <div class="col-md-4 text-center mb-4">
+                                    <i class="bi bi-shield-check display-4 text-warning mb-3"></i>
+                                    <h5>Maintainable Code</h5>
+                                    <p>Clean architecture following SOLID principles for easy debugging and updates.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future System Developments -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0">
+                                <i class="bi bi-lightbulb me-2"></i>Future System Developments
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-primary mb-3">Planned Features</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="bi bi-plus-circle text-success me-2"></i>
+                                            <strong>Magic System Integration:</strong> Spell casting and elemental effects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-plus-circle text-success me-2"></i>
+                                            <strong>AI Combat System:</strong> Intelligent enemy behavior trees
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-plus-circle text-success me-2"></i>
+                                            <strong>Multiplayer Support:</strong> Network-synchronized combat
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-plus-circle text-success me-2"></i>
+                                            <strong>Skill Trees:</strong> Character progression and abilities
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-primary mb-3">System Expansions</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="bi bi-gear text-info me-2"></i>
+                                            <strong>Inventory System:</strong> Weapon and item management
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-gear text-info me-2"></i>
+                                            <strong>Crafting System:</strong> Weapon customization and upgrades
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-gear text-info me-2"></i>
+                                            <strong>Quest System:</strong> Combat-based objectives and rewards
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-gear text-info me-2"></i>
+                                            <strong>Analytics System:</strong> Combat performance tracking
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Example Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-secondary text-white">
+                            <h5 class="mb-0">
+                                <i class="bi bi-file-code me-2"></i>Sample Code Structure
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <pre class="bg-light p-3 rounded"><code>// Combat State Machine Example
+public class CombatStateMachine : MonoBehaviour
+{
+    public ICombatState CurrentState { get; private set; }
+    
+    private Dictionary&lt;Type, ICombatState&gt; states;
+    
+    public void TransitionTo&lt;T&gt;() where T : ICombatState
+    {
+        CurrentState?.Exit();
+        CurrentState = states[typeof(T)];
+        CurrentState.Enter();
+    }
+}
+
+// Weapon Strategy Pattern
+public interface IWeaponStrategy
+{
+    void ExecuteAttack(WeaponData weaponData);
+    bool CanExecuteCombo();
+}
+
+// Observer Pattern for Combat Events
+public static class CombatEvents
+{
+    public static event Action&lt;float&gt; OnDamageDealt;
+    public static event Action&lt;string&gt; OnComboExecuted;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation to Other Sections -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h4 class="mb-4">Explore Game Projects</h4>
+                    <a href="2d.html" class="btn btn-outline-primary btn-lg me-3">
+                        <i class="bi bi-grid-3x3-gap me-2"></i>2D Games
+                    </a>
+                    <a href="3d.html" class="btn btn-outline-success btn-lg me-3">
+                        <i class="bi bi-box me-2"></i>3D Games
+                    </a>
+                    <a href="vr.html" class="btn btn-outline-info btn-lg">
+                        <i class="bi bi-headset-vr me-2"></i>VR Games
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Hardik Kalena - Game Developer Portfolio. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
+</html>right text-primary me-2"></i>
+<div>
+    <strong>State Machine Pattern</strong>
+    <br><small class="text-muted">Managing combat states (Idle, Attack, Block, Parry)</small>
+</div>
+                                        </div>
+<div class="list-group-item d-flex align-items-center">
+    <i class="bi bi-arrow-right text-success me-2"></i>
+    <div>
+        <strong>Strategy Pattern</strong>
+        <br><small class="text-muted">Different weapon types and combat styles</small>
+    </div>
+</div>
+<div class="list-group-item d-flex align-items-center">
+    <i class="bi bi-arrow-

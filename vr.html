@@ -3,43 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VR Games - My Game Portfolio</title>
+    <title>VR Games - Hardik Kalena Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li class="dropdown">
-                    <a href="#">Portfolio</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="2d.html">2D Games</a></li>
-                        <li><a href="3d.html">3D Games</a></li>
-                        <li><a href="vr.html">VR Games</a></li>
-                        <li><a href="systems.html">Systems</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-controller me-2"></i>Hardik Kalena
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="2d.html">2D Games</a></li>
+                            <li><a class="dropdown-item" href="3d.html">3D Games</a></li>
+                            <li><a class="dropdown-item active" href="vr.html">VR Games</a></li>
+                            <li><a class="dropdown-item" href="systems.html">Systems</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <section id="vr-games">
-        <h1>VR Games</h1>
-        <p>Step into the immersive world of VR games, where every moment is an adventure.</p>
-
-        <div class="game-showcase">
-            <div class="game">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/sfgRq1LBid0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <p><strong>VR Shooter</strong> - Endless Shooting Experience</p>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-title">
+                        <i class="bi bi-headset-vr me-3"></i>VR Games
+                    </h1>
+                    <p class="page-subtitle">Step into the immersive world of Virtual Reality games, where every moment is an adventure and players become part of the action through cutting-edge VR technology.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 My Game Portfolio. All rights reserved.</p>
+    <!-- VR Games Content -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Main VR Game Showcase -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/sfgRq1LBid0" title="VR Shooter Gameplay" allowfullscreen style="height: 500px;"></iframe>
+                        </div>
+                        <div class="game-card-body p-4">
+                            <h3 class="game-title text-center mb-4">
+                                <i class="bi bi-rocket me-2 text-primary"></i>VR Shooter - Endless Space Experience
+                            </h3>
+                            <p class="game-description lead text-center mb-4">An immersive virtual reality space shooter that places players in the cockpit of a starfighter, battling through endless waves of alien enemies in the depths of space. This VR experience leverages the full potential of virtual reality technology to create an unparalleled sense of presence and engagement.</p>
+
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <h5 class="text-primary mb-3">
+                                        <i class="bi bi-gear-fill me-2"></i>VR Features
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Hand Tracking:</strong> Natural hand movements for weapon control
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>360° Environment:</strong> Full immersive space battlefield
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Spatial Audio:</strong> 3D positional sound design
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Haptic Feedback:</strong> Controller vibration for immersion
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Room Scale VR:</strong> Physical movement integration
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-primary mb-3">
+                                        <i class="bi bi-controller me-2"></i>Gameplay Elements
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Endless Waves:</strong> Progressively challenging enemy encounters
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Multiple Weapons:</strong> Various space-age weaponry systems
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Power-ups:</strong> Collectible enhancements and abilities
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Score System:</strong> Competitive leaderboard mechanics
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle text-success me-2"></i>
+                                            <strong>Dynamic AI:</strong> Intelligent enemy behavior patterns
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <span class="badge bg-primary me-2">VR Experience</span>
+                                <span class="badge bg-danger me-2">Space Shooter</span>
+                                <span class="badge bg-success me-2">Unity XR Toolkit</span>
+                                <span class="badge bg-warning me-2">Endless Gameplay</span>
+                                <span class="badge bg-info">Immersive Audio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VR Development Process -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card bg-light">
+                        <div class="card-body p-4">
+                            <h4 class="text-center mb-4">VR Development Process</h4>
+                            <div class="row">
+                                <div class="col-md-3 text-center mb-4">
+                                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                        <span class="h3 mb-0">1</span>
+                                    </div>
+                                    <h5>Planning & Design</h5>
+                                    <p class="text-muted">Conceptualized VR-specific gameplay mechanics and user experience design considerations for comfortable VR interaction.</p>
+                                </div>
+                                <div class="col-md-3 text-center mb-4">
+                                    <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                        <span class="h3 mb-0">2</span>
+                                    </div>
+                                    <h5>VR Setup</h5>
+                                    <p class="text-muted">Implemented Unity XR Toolkit with proper controller mapping, hand tracking, and VR camera rig configuration.</p>
+                                </div>
+                                <div class="col-md-3 text-center mb-4">
+                                    <div class="bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                        <span class="h3 mb-0">3</span>
+                                    </div>
+                                    <h5>Optimization</h5>
+                                    <p class="text-muted">Performance optimization for VR requirements, maintaining 90+ FPS with efficient rendering and physics calculations.</p>
+                                </div>
+                                <div class="col-md-3 text-center mb-4">
+                                    <div class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                        <span class="h3 mb-0">4</span>
+                                    </div>
+                                    <h5>Testing</h5>
+                                    <p class="text-muted">Extensive VR testing for comfort, motion sickness prevention, and intuitive control schemes across different VR platforms.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Specifications -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-gradient" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                            <h4 class="text-white mb-0">
+                                <i class="bi bi-cpu me-2"></i>Technical Specifications
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5 class="text-primary mb-3">
+                                        <i class="bi bi-tools me-2"></i>Development Tools
+                                    </h5>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Unity 2021.3 LTS</li>
+                                        <li class="list-group-item">Unity XR Toolkit</li>
+                                        <li class="list-group-item">Visual Studio 2022</li>
+                                        <li class="list-group-item">Blender (3D Modeling)</li>
+                                        <li class="list-group-item">Audacity (Audio)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5 class="text-primary mb-3">
+                                        <i class="bi bi-headset me-2"></i>VR Platforms
+                                    </h5>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Oculus Rift/Rift S</li>
+                                        <li class="list-group-item">Oculus Quest/Quest 2</li>
+                                        <li class="list-group-item">HTC Vive</li>
+                                        <li class="list-group-item">Windows Mixed Reality</li>
+                                        <li class="list-group-item">Valve Index</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5 class="text-primary mb-3">
+                                        <i class="bi bi-code-square me-2"></i>Key Technologies
+                                    </h5>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">C# Scripting</li>
+                                        <li class="list-group-item">OpenXR Standard</li>
+                                        <li class="list-group-item">3D Spatial Audio</li>
+                                        <li class="list-group-item">Physics-based Interaction</li>
+                                        <li class="list-group-item">Performance Optimization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future VR Projects -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body p-4 text-center">
+                            <h4 class="mb-4">
+                                <i class="bi bi-lightbulb me-2"></i>Future VR Developments
+                            </h4>
+                            <p class="lead mb-4">Exploring next-generation VR experiences with advanced features</p>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <i class="bi bi-eye display-5 text-info mb-3"></i>
+                                    <h5>Eye Tracking</h5>
+                                    <p>Advanced gaze-based interactions and foveated rendering</p>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <i class="bi bi-hand-index display-5 text-success mb-3"></i>
+                                    <h5>Hand Tracking</h5>
+                                    <p>Precise finger tracking for more natural VR interactions</p>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <i class="bi bi-people display-5 text-warning mb-3"></i>
+                                    <h5>Multiplayer VR</h5>
+                                    <p>Collaborative virtual environments and shared experiences</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation to Other Sections -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h4 class="mb-4">Explore More Projects</h4>
+                    <a href="2d.html" class="btn btn-outline-primary btn-lg me-3">
+                        <i class="bi bi-grid-3x3-gap me-2"></i>2D Games
+                    </a>
+                    <a href="3d.html" class="btn btn-outline-success btn-lg me-3">
+                        <i class="bi bi-box me-2"></i>3D Games
+                    </a>
+                    <a href="systems.html" class="btn btn-custom btn-lg">
+                        <i class="bi bi-cpu me-2"></i>Systems
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Hardik Kalena - Game Developer Portfolio. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

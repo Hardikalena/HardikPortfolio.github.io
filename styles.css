@@ -1,245 +1,440 @@
-/* General body styling */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --dark-bg: #1a1a1a;
+    --light-bg: #f8f9fa;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
 }
 
-/* Header styling */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+/* Custom navbar styling */
+.navbar-custom {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-/* Navigation menu styling */
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-    nav ul li {
-        display: inline;
-        margin: 0 15px;
-    }
-
-        /* Styling for links in the header menu */
-        nav ul li a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #444; /* Dark background for all menu links */
-            color: #fff;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            margin: 0 10px; /* Spacing between menu items */
-        }
-
-            /* Hover effect for all menu links */
-            nav ul li a:hover {
-                background-color: #555; /* Lighter shade on hover */
-            }
-
-/* Dropdown container */
-.dropdown {
-    position: relative;
-}
-
-/* Dropdown menu */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333; /* Dropdown background */
-    border: 1px solid #444; /* Border around the dropdown */
-    min-width: 200px;
-    padding: 10px 0;
-    border-radius: 5px;
-    list-style: none;
-    z-index: 1000;
-}
-
-    /* Style for each menu item in the dropdown */
-    .dropdown-menu li {
-        padding: 10px 20px;
-        background-color: #333;
-        margin: 5px 0;
-        border-radius: 5px;
-    }
-
-        /* Hover effect for each dropdown item */
-        .dropdown-menu li:hover {
-            background-color: #555; /* Lighter shade on hover */
-        }
-
-        /* Style for links inside the dropdown */
-        .dropdown-menu li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-            /* Change color on hover */
-            .dropdown-menu li a:hover {
-                color: #f4f4f4;
-            }
-
-/* Background and spacing for the category link */
-.dropdown a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #444;
-    color: #fff;
+.navbar-brand {
     font-weight: bold;
-    border-radius: 5px;
-    margin: 0 10px;
-    text-decoration: none;
+    font-size: 1.5rem;
 }
 
-    /* Hover effect for category link */
-    .dropdown a:hover {
-        background-color: #555;
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: #ffd700 !important;
     }
 
-/* Show dropdown menu on hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Home section styling */
-#home {
-    background: url('your-banner-image.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 120px 20px;
-}
-
-/* Hero section with title and description */
-.hero {
-    background-color: #333;
-    padding: 50px 500px;
-    border-radius: 10px;
-}
-
-    .hero h1 {
-        font-size: 3rem;
-        margin: 0;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-        margin: 10px 0;
-    }
-
-/* Content grid layout */
-.content-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
-}
-
-/* Content card for each game showcase */
-.content-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-    .content-card iframe {
-        border-radius: 10px;
-    }
-
-    .content-card h3 {
-        margin-top: 10px;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
-/* About section styling */
-#about {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #fff;
-}
-
-/* Contact information styling */
-.contact-info {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.contact-item {
-    margin-bottom: 20px;
-}
-
-    .contact-item h3 {
-        font-size: 1.5em;
-        margin-bottom: 5px;
-    }
-
-    .contact-item a {
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-        .contact-item a:hover {
-            color: #007BFF; /* Link hover color */
-        }
-
-
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-    footer p {
-        margin: 0;
-    }
-
-/* 2D, 3D, VR section styles to center content */
-section {
-    padding: 20px;
-    text-align: center;
-}
-
-    section h1, section p {
-        text-align: center;
-        margin: 20px auto;
-        max-width: 800px;
-    }
-
-.game-showcase {
+/* Hero section */
+.hero-section {
+    background: linear-gradient(135deg, var(--dark-bg), var(--primary-color));
+    color: white;
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 30px;
+    align-items: center;
 }
 
-.game {
-    max-width: 560px;
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        opacity: 0.1;
+    }
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #fff, var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-section .lead {
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.hero-section .btn {
+    animation: fadeInUp 1s ease 0.6s both;
+}
+
+/* Game cards */
+.game-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+    .game-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .game-card iframe {
+        width: 100%;
+        height: 250px;
+        border: none;
+    }
+
+.game-card-body {
+    padding: 1.5rem;
+}
+
+.game-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.game-description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Section styling */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    position: relative;
     text-align: center;
 }
 
-    .game iframe {
-        width: 100%;
-        height: 315px;
-        border-radius: 10px;
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+        border-radius: 2px;
     }
 
-    .game p {
-        margin-top: 10px;
-        font-size: 1.2em;
+/* About section */
+.about-section {
+    background: var(--primary-color);
+    color: white;
+    padding: 80px 0;
+}
+
+.about-content {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .about-content p {
+        margin-bottom: 1.5rem;
+    }
+
+/* Contact section */
+.contact-section {
+    background: var(--dark-bg);
+    color: white;
+    padding: 80px 0;
+}
+
+.contact-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+    .contact-card:hover {
+        background: rgba(255,255,255,0.15);
+        transform: translateY(-5px);
+    }
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.contact-card h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact-card a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    .contact-card a:hover {
+        color: var(--secondary-color);
+    }
+
+/* Footer */
+.footer {
+    background: #000;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Custom buttons */
+.btn-custom {
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+    .btn-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        color: white;
+    }
+
+/* Video container with loading effect */
+.video-container {
+    position: relative;
+    background: #f0f0f0;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+    .video-container::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        border: 3px solid #ddd;
+        border-top: 3px solid var(--secondary-color);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        z-index: 1;
+    }
+
+    .video-container iframe {
+        position: relative;
+        z-index: 2;
+    }
+
+/* Animations */
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Page-specific styles */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 120px 0 60px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Resume specific styles */
+.resume-section {
+    padding: 80px 0;
+}
+
+.resume-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.resume-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.resume-body {
+    padding: 3rem;
+}
+
+.resume-section-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.job-title {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.company-name {
+    color: #666;
+    font-style: italic;
+}
+
+.date-range {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .game-card iframe {
+        height: 200px;
+    }
+
+    .hero-section {
+        padding: 100px 0 60px;
+    }
+
+    .page-header {
+        padding: 100px 0 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-card {
+        padding: 1.5rem;
+    }
+
+    .resume-header {
+        padding: 2rem 1rem;
+    }
+
+    .resume-body {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading states */
+.video-container.loaded::before {
+    display: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-color);
     }

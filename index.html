@@ -3,104 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Game Portfolio</title>
+    <title>Hardik Kalena - Game Developer Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li class="dropdown">
-                    <a href="#">Portfolio</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="2d.html">2D Games</a></li>
-                        <li><a href="3d.html">3D Games</a></li>
-                        <li><a href="vr.html">VR Games</a></li>
-                        <li><a href="systems.html">Systems</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home">
-        <div class="hero">
-            <h1>Welcome to My Game Portfolio</h1>
-            <p>Discover my latest game projects</p>
-            <p>I'm Hardik Kalena</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="bi bi-controller me-2"></i>Hardik Kalena
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="2d.html">2D Games</a></li>
+                            <li><a class="dropdown-item" href="3d.html">3D Games</a></li>
+                            <li><a class="dropdown-item" href="vr.html">VR Games</a></li>
+                            <li><a class="dropdown-item" href="systems.html">Systems</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="content-grid">
-            <div class="content-card">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/ve_6C15JaIk" title="Aftermath Gameplay" frameborder="0" allowfullscreen></iframe>
-                <h3>Aftermath - Open World Zombie Survival Game</h3>
-            </div>
-            <div class="content-card">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/j-YX8S1ulgU" title="Tatva Shilla Gameplay" frameborder="0" allowfullscreen></iframe>
-                <h3>Tatva Shilla - Stone Age Tower Defense</h3>
-            </div>
-            <div class="content-card">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/sfgRq1LBid0" title="VR Shooter Gameplay" frameborder="0" allowfullscreen></iframe>
-                <h3>VR Shooter - Endless Space Shooting Experience</h3>
-            </div>
-            <div class="content-card">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/wQiLk19Z8vA?si=bbmPcSo-LbKiRYQD" title="Ping Pong Gameplay" frameborder="0" allowfullscreen></iframe>
-                <h3>Hyper casual Game</h3>
-            </div>
-            <div class="content-card">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/CeHqzgMGbv8?si=iRJjnMq-tJABGj9Z" title="Endless Runner Gameplay" frameborder="0" allowfullscreen></iframe>
-                <h3>Endless Runner Game</h3>
-            </div>
-            <div class="content-card">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/Uf5-ZdyRndU?si=DZhOCZetjWlhY_1c" title="Tank Shooter Gameplay" frameborder="0" allowfullscreen></iframe>
-                <h3>Tank Shooter Game</h3>
-            </div>
-            <div class="content-card">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/sewv-hvH7jM?si=rK0bSL2t-BiJIdFk" title="Chronoshift Gameplay" frameborder="0" allowfullscreen></iframe>
-                <h3>Space Shooter Game</h3>
-            </div>
-            <div class="content-card">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/ge3Lqp7CaJE?si=EHB411_RMGnj7fVn" title="Combat System" frameborder="0" allowfullscreen></iframe>
-                <h3>Combat System</h3>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center hero-content">
+                    <h1 class="hero-title">Welcome to My Game Portfolio</h1>
+                    <p class="hero-subtitle">I'm Hardik Kalena, Unity Game Developer</p>
+                    <p class="lead mb-4">Discover my latest game projects spanning 2D, 3D, and VR experiences</p>
+                    <a href="#about" class="btn btn-custom btn-lg me-3">Learn More</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg">Get In Touch</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a game developer passionate about creating immersive experiences. Explore my projects in various genres like 2D, 3D, and VR games.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p> Email : <a href="mailto:hardikkalena007@gmail.com">hardikkalena007@gmail.com</a>.</p>
-
-        <div class="contact-info">
-            <div class="contact-item">
-                <h3>Phone Number</h3>
-                <p><a href="tel:+1234567890">+91 9023551905</a></p> <!-- Replace with your phone number -->
-            </div>
-
-            <div class="contact-item">
-                <h3>WhatsApp</h3>
-                <p><a href="https://wa.me/9904971612">+91 9904971612</a></p> <!-- Replace with your WhatsApp number -->
-            </div>
-
-            <div class="contact-item">
-                <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/in/hardik-kalena" target="_blank">View my LinkedIn</a></p> <!-- Replace with your LinkedIn profile URL -->
+    <!-- Featured Games -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Featured Games</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/ve_6C15JaIk" title="Aftermath Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">Aftermath</h5>
+                            <p class="game-description">Open World Zombie Survival Game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/j-YX8S1ulgU" title="Tatva Shilla Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">Tatva Shilla</h5>
+                            <p class="game-description">Stone Age Tower Defense Game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/sfgRq1LBid0" title="VR Shooter Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">VR Shooter</h5>
+                            <p class="game-description">Endless Space Shooting Experience</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- All Games Grid -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">All Games</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/wQiLk19Z8vA?si=bbmPcSo-LbKiRYQD" title="Ping Pong Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">Ping Pong</h5>
+                            <p class="game-description">Hyper Casual Game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/CeHqzgMGbv8?si=iRJjnMq-tJABGj9Z" title="Endless Runner Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">Endless Runner</h5>
+                            <p class="game-description">Endless Runner Game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/Uf5-ZdyRndU?si=DZhOCZetjWlhY_1c" title="Tank Shooter Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">Tank Shooter</h5>
+                            <p class="game-description">Tank Shooter Game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/sewv-hvH7jM?si=rK0bSL2t-BiJIdFk" title="Chronoshift Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">Chronoshift</h5>
+                            <p class="game-description">Space Shooter Game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/3wSCxUe6ZtQ" title="Sky Clash Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">Sky Clash</h5>
+                            <p class="game-description">Hyper Casual Game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/ge3Lqp7CaJE?si=EHB411_RMGnj7fVn" title="Combat System" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">Combat System</h5>
+                            <p class="game-description">Unity Combat System</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 My Game Portfolio. All rights reserved.</p>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title text-white">About Me</h2>
+                    <div class="about-content">
+                        <p class="lead">I'm a passionate game developer with expertise in Unity and C#, dedicated to creating immersive and engaging gaming experiences.</p>
+                        <p>Currently pursuing BCA in Game Development at Ajeenkya DY Patil University with a CGPA of 8.50. I have hands-on experience working as a Game Development Intern at Sherlock Studios, where I refactored legacy codebases and implemented horror gameplay systems.</p>
+                        <p>My portfolio spans across various genres including 2D arcade games, 3D survival experiences, VR adventures, and modular game systems. I'm always eager to learn new technologies and collaborate on innovative projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title text-white">Contact Me</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card h-100">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <h5>Email</h5>
+                        <p><a href="mailto:hardikkalena007@gmail.com">hardikkalena007@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card h-100">
+                        <div class="contact-icon">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h5>Phone</h5>
+                        <p><a href="tel:+919023551905">+91 9023551905</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card h-100">
+                        <div class="contact-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <h5>WhatsApp</h5>
+                        <p><a href="https://wa.me/919904971612">+91 9904971612</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card h-100">
+                        <div class="contact-icon">
+                            <i class="bi bi-linkedin"></i>
+                        </div>
+                        <h5>LinkedIn</h5>
+                        <p><a href="https://www.linkedin.com/in/hardik-kalena" target="_blank">View Profile</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Hardik Kalena - Game Developer Portfolio. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

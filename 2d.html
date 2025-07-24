@@ -3,55 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2D Games - My Game Portfolio</title>
+    <title>2D Games - Hardik Kalena Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li class="dropdown">
-                    <a href="#">Portfolio</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="2d.html">2D Games</a></li>
-                        <li><a href="3d.html">3D Games</a></li>
-                        <li><a href="vr.html">VR Games</a></li>
-                        <li><a href="systems.html">Systems</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-controller me-2"></i>Hardik Kalena
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="2d.html">2D Games</a></li>
+                            <li><a class="dropdown-item" href="3d.html">3D Games</a></li>
+                            <li><a class="dropdown-item" href="vr.html">VR Games</a></li>
+                            <li><a class="dropdown-item" href="systems.html">Systems</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <section id="2d-games">
-        <h1>2D Games</h1>
-        <p>Explore my collection of 2D games, featuring unique mechanics and engaging gameplay.</p>
-
-        <div class="game-showcase">
-            <div class="game">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/j-YX8S1ulgU" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <p><strong>Tatva Shilla</strong> - Stone Age Tower Defense Game</p>
-            </div>
-            <div class="game">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/wQiLk19Z8vA?si=bbmPcSo-LbKiRYQD" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <p><strong>Ping Pong</strong> - Hyper Casual Game</p>
-            </div>
-            <div class="game">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3wSCxUe6ZtQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <p><strong>Sky Clash</strong> - Hyper Casual Game</p>
-            </div>
-            <div class="game">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/sewv-hvH7jM?si=rK0bSL2t-BiJIdFk" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                <p><strong> Chronoshift </strong> - Space Shooter Game</p>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="page-title">
+                        <i class="bi bi-grid-3x3-gap me-3"></i>2D Games
+                    </h1>
+                    <p class="page-subtitle">Explore my collection of 2D games, featuring unique mechanics and engaging gameplay experiences that showcase creativity and technical skill in game development.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 My Game Portfolio. All rights reserved.</p>
+    <!-- 2D Games Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Tatva Shilla -->
+                <div class="col-lg-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/j-YX8S1ulgU" title="Tatva Shilla Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">
+                                <i class="bi bi-trophy me-2 text-warning"></i>Tatva Shilla
+                            </h5>
+                            <p class="game-description">Stone Age Tower Defense Game - A strategic tower defense experience set in prehistoric times. Features unique stone age weaponry, primitive defenses, and challenging enemy waves. This project won a game jam competition for its innovative mechanics and engaging gameplay.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">Tower Defense</span>
+                                <span class="badge bg-success me-2">Strategy</span>
+                                <span class="badge bg-warning">Award Winner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ping Pong -->
+                <div class="col-lg-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/wQiLk19Z8vA?si=bbmPcSo-LbKiRYQD" title="Ping Pong Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">
+                                <i class="bi bi-circle me-2 text-info"></i>Ping Pong
+                            </h5>
+                            <p class="game-description">Hyper Casual Game - A fast-paced, addictive ping pong experience designed for mobile platforms. Features smooth physics, responsive controls, and progressively challenging AI opponents. Perfect for quick gaming sessions with intuitive one-touch gameplay.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-info me-2">Hyper Casual</span>
+                                <span class="badge bg-secondary me-2">Mobile</span>
+                                <span class="badge bg-primary">Sports</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sky Clash -->
+                <div class="col-lg-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/3wSCxUe6ZtQ" title="Sky Clash Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">
+                                <i class="bi bi-airplane me-2 text-primary"></i>Sky Clash
+                            </h5>
+                            <p class="game-description">Hyper Casual Game - An aerial combat game featuring fast-paced dogfights in the sky. Players navigate through challenging obstacles while engaging enemy aircraft. Combines simple controls with exciting aerial maneuvers for an engaging casual gaming experience.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">Hyper Casual</span>
+                                <span class="badge bg-danger me-2">Action</span>
+                                <span class="badge bg-info">Aerial Combat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chronoshift -->
+                <div class="col-lg-6">
+                    <div class="game-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/sewv-hvH7jM?si=rK0bSL2t-BiJIdFk" title="Chronoshift Gameplay" allowfullscreen></iframe>
+                        </div>
+                        <div class="game-card-body">
+                            <h5 class="game-title">
+                                <i class="bi bi-rocket me-2 text-success"></i>Chronoshift
+                            </h5>
+                            <p class="game-description">Space Shooter Game - A time-bending space shooter that combines classic arcade action with innovative time manipulation mechanics. Players can slow down time to dodge bullets and plan strategic attacks against alien invaders in this unique twist on the genre.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-success me-2">Shooter</span>
+                                <span class="badge bg-purple me-2">Sci-Fi</span>
+                                <span class="badge bg-warning">Time Mechanics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card bg-light">
+                        <div class="card-body p-4">
+                            <h4 class="text-center mb-4">2D Game Development Highlights</h4>
+                            <div class="row">
+                                <div class="col-md-4 text-center mb-3">
+                                    <i class="bi bi-award display-4 text-primary mb-3"></i>
+                                    <h5>Award-Winning Design</h5>
+                                    <p class="text-muted">Tatva Shilla won first place in a competitive game jam, showcasing innovative gameplay mechanics and polished execution.</p>
+                                </div>
+                                <div class="col-md-4 text-center mb-3">
+                                    <i class="bi bi-phone display-4 text-success mb-3"></i>
+                                    <h5>Mobile Optimization</h5>
+                                    <p class="text-muted">All 2D games are optimized for mobile platforms with responsive controls and smooth performance across devices.</p>
+                                </div>
+                                <div class="col-md-4 text-center mb-3">
+                                    <i class="bi bi-gear display-4 text-warning mb-3"></i>
+                                    <h5>Unity Expertise</h5>
+                                    <p class="text-muted">Developed using Unity Engine with custom scripts, particle systems, and optimized 2D physics for engaging gameplay.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation to Other Sections -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h4 class="mb-4">Explore More Projects</h4>
+                    <a href="3d.html" class="btn btn-custom btn-lg me-3">
+                        <i class="bi bi-box me-2"></i>3D Games
+                    </a>
+                    <a href="vr.html" class="btn btn-outline-primary btn-lg me-3">
+                        <i class="bi bi-headset-vr me-2"></i>VR Games
+                    </a>
+                    <a href="systems.html" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-cpu me-2"></i>Systems
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Hardik Kalena - Game Developer Portfolio. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

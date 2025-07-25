@@ -91,11 +91,11 @@
                                         </li>
                                         <li class="mb-2">
                                             <i class="bi bi-check-circle text-success me-2"></i>
-                                            <strong>State Machine:</strong> Finite state machine for combat states
+                                            <strong>Game Feel:</strong> Camera Shakes and Haptic Feedback for Controllers
                                         </li>
                                         <li class="mb-2">
                                             <i class="bi bi-check-circle text-success me-2"></i>
-                                            <strong>Strategy Pattern:</strong> Different combat strategies and styles
+                                            <strong>Soulslike Pattern:</strong> Souls Like combat strategies and styles
                                         </li>
                                         <li class="mb-2">
                                             <i class="bi bi-check-circle text-success me-2"></i>
@@ -240,20 +240,6 @@
                                                 <br><small class="text-muted">Decoupled event-driven communication</small>
                                             </div>
                                         </div>
-                                        <div class="list-group-item d-flex align-items-center">
-                                            <i class="bi bi-check2 text-success me-2"></i>
-                                            <div>
-                                                <strong>Object Pooling</strong>
-                                                <br><small class="text-muted">Efficient particle and effect management</small>
-                                            </div>
-                                        </div>
-                                        <div class="list-group-item d-flex align-items-center">
-                                            <i class="bi bi-check2 text-success me-2"></i>
-                                            <div>
-                                                <strong>Custom Inspectors</strong>
-                                                <br><small class="text-muted">Enhanced Unity editor integration</small>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -361,34 +347,55 @@
                             </h5>
                         </div>
                         <div class="card-body">
-                            <pre class="bg-light p-3 rounded"><code>// Combat State Machine Example
-public class CombatStateMachine : MonoBehaviour
-{
-    public ICombatState CurrentState { get; private set; }
-    
-    private Dictionary&lt;Type, ICombatState&gt; states;
-    
-    public void TransitionTo&lt;T&gt;() where T : ICombatState
+                            <pre class="bg-light p-3 rounded"><code>
+    // Combat System Example
+    public void HandleAttackInput()
     {
-        CurrentState?.Exit();
-        CurrentState = states[typeof(T)];
-        CurrentState.Enter();
+    bool usingWeapon = weaponHandler != null && weaponHandler.IsWeaponDrawn;
+    if(!usingWeapon)
+    return;
+    if (blockParry != null && blockParry.IsBlocked())
+    return;
+
+    if (!isAttacking)
+    {
+    // Start first attack
+    comboStep = 0;
+    TryAttack();
     }
-}
+    else
+    {
+    // Buffer input for next combo step
+    inputBuffered = true;
+    }
+    }
 
-// Weapon Strategy Pattern
-public interface IWeaponStrategy
-{
-    void ExecuteAttack(WeaponData weaponData);
-    bool CanExecuteCombo();
-}
+    private void TryAttack()
+    {
+    // Check stamina
+    if (comboStep >= lightAttackStaminaCost.Length)
+    comboStep = 0;
 
-// Observer Pattern for Combat Events
-public static class CombatEvents
-{
-    public static event Action&lt;float&gt; OnDamageDealt;
-    public static event Action&lt;string&gt; OnComboExecuted;
-}</code></pre>
+    float staminaCost = lightAttackStaminaCost[comboStep];
+    if (!staminaSystem.HasStamina(staminaCost))
+    return;
+
+    staminaSystem.UseStamina(staminaCost);
+    isAttacking = true;
+    lastAttackTime = Time.time;
+
+    // Play animation
+    string triggerName = $"LightAttack{comboStep + 1}";
+    animator.SetTrigger(triggerName);
+
+    movementController.DisableMovement();
+
+    // Start/reset combo reset timer
+    if (comboResetCoroutine != null)
+    StopCoroutine(comboResetCoroutine);
+    comboResetCoroutine = StartCoroutine(ComboResetTimer());
+    }
+</code></pre>
                         </div>
                     </div>
                 </div>
@@ -420,7 +427,7 @@ public static class CombatEvents
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>right text-primary me-2"></i>
@@ -437,4 +444,4 @@ public static class CombatEvents
     </div>
 </div>
 <div class="list-group-item d-flex align-items-center">
-    <i class="bi bi-arrow-
+    <i class="bi bi-arrow--->

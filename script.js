@@ -1,6 +1,103 @@
-// Enhanced JavaScript for Bootstrap Portfolio
+// Enhanced JavaScript for Bootstrap Portfolio with Mobile Dropdown Fix
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Mobile dropdown fix for Android
+    function initMobileDropdownFix() {
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+        dropdownToggles.forEach(toggle => {
+            // Add touch event listeners for mobile
+            toggle.addEventListener('touchstart', function (e) {
+                // Prevent default to avoid double-tap issues
+                e.preventDefault();
+
+                // Close other dropdowns first
+                const allDropdowns = document.querySelectorAll('.dropdown-menu.show');
+                allDropdowns.forEach(dropdown => {
+                    if (!dropdown.closest('.dropdown').contains(this)) {
+                        const otherToggle = dropdown.previousElementSibling;
+                        if (otherToggle && otherToggle.classList.contains('dropdown-toggle')) {
+                            const bsDropdown = new bootstrap.Dropdown(otherToggle);
+                            bsDropdown.hide();
+                        }
+                    }
+                });
+
+                // Toggle current dropdown
+                const bsDropdown = new bootstrap.Dropdown(this);
+                const dropdownMenu = this.nextElementSibling;
+
+                if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+                    bsDropdown.hide();
+                } else {
+                    bsDropdown.show();
+                }
+            });
+
+            // Also handle click events (fallback)
+            toggle.addEventListener('click', function (e) {
+                if (window.innerWidth <= 991) { // Mobile/tablet breakpoint
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const bsDropdown = new bootstrap.Dropdown(this);
+                    const dropdownMenu = this.nextElementSibling;
+
+                    if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+                        bsDropdown.hide();
+                    } else {
+                        bsDropdown.show();
+                    }
+                }
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('touchstart', function (e) {
+            const dropdowns = document.querySelectorAll('.dropdown-menu.show');
+            dropdowns.forEach(dropdown => {
+                const dropdownContainer = dropdown.closest('.dropdown');
+                if (!dropdownContainer.contains(e.target)) {
+                    const toggle = dropdownContainer.querySelector('.dropdown-toggle');
+                    if (toggle) {
+                        const bsDropdown = new bootstrap.Dropdown(toggle);
+                        bsDropdown.hide();
+                    }
+                }
+            });
+        });
+    }
+
+    // Initialize mobile dropdown fix
+    initMobileDropdownFix();
+
+    // Alternative approach - Force Bootstrap dropdown behavior
+    function forceBootstrapDropdown() {
+        const portfolioDropdown = document.querySelector('.nav-link.dropdown-toggle');
+
+        if (portfolioDropdown) {
+            // Remove existing event listeners by cloning the element
+            const newPortfolioDropdown = portfolioDropdown.cloneNode(true);
+            portfolioDropdown.parentNode.replaceChild(newPortfolioDropdown, portfolioDropdown);
+
+            // Add proper Bootstrap dropdown initialization
+            const dropdown = new bootstrap.Dropdown(newPortfolioDropdown, {
+                autoClose: true,
+                boundary: 'viewport'
+            });
+
+            // Manual toggle for mobile
+            newPortfolioDropdown.addEventListener('touchend', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdown.toggle();
+            }, { passive: false });
+        }
+    }
+
+    // Initialize alternative approach
+    forceBootstrapDropdown();
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -181,12 +278,52 @@ document.addEventListener('DOMContentLoaded', function () {
         return isValid;
     };
 
-    // Add CSS for ripple effect
+    // Add CSS for ripple effect and mobile dropdown
     const style = document.createElement('style');
     style.textContent = `
         .btn {
             position: relative;
             overflow: hidden;
+        }
+        
+        /* Mobile dropdown fixes */
+        @media (max-width: 991px) {
+            .dropdown-menu {
+                position: absolute !important;
+                transform: none !important;
+                top: 100% !important;
+                left: 0 !important;
+                margin: 0 !important;
+                border: 1px solid rgba(0,0,0,.15) !important;
+                border-radius: 0.375rem !important;
+                box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+                background-color: #fff !important;
+                z-index: 1000 !important;
+            }
+            
+            .dropdown-toggle::after {
+                transition: transform 0.2s ease;
+            }
+            
+            .dropdown-toggle[aria-expanded="true"]::after {
+                transform: rotate(180deg);
+            }
+            
+            .navbar-nav .dropdown-menu {
+                background-color: rgba(255, 255, 255, 0.95) !important;
+                backdrop-filter: blur(10px);
+            }
+            
+            .dropdown-item {
+                color: #333 !important;
+                padding: 0.5rem 1rem !important;
+            }
+            
+            .dropdown-item:hover,
+            .dropdown-item:focus {
+                background-color: rgba(0, 123, 255, 0.1) !important;
+                color: #0d6efd !important;
+            }
         }
         
         .ripple {
@@ -218,12 +355,34 @@ document.addEventListener('DOMContentLoaded', function () {
                 transform: translateY(0);
             }
         }
+        
+        /* Ensure touch targets are large enough */
+        .dropdown-toggle {
+            min-height: 44px;
+            min-width: 44px;
+            display: flex !important;
+            align-items: center !important;
+        }
     `;
     document.head.appendChild(style);
 
-    // Mobile menu close on link click
+    // Mobile menu close on link click with dropdown fix
     document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
         link.addEventListener('click', () => {
+            // Don't close if it's a dropdown toggle
+            if (!link.classList.contains('dropdown-toggle')) {
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
+            }
+        });
+    });
+
+    // Close mobile menu when dropdown item is clicked
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', () => {
             const navbarCollapse = document.querySelector('.navbar-collapse');
             if (navbarCollapse.classList.contains('show')) {
                 const bsCollapse = new bootstrap.Collapse(navbarCollapse);
